@@ -1,0 +1,15 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='style.css')
+    meta(name="viewport", content="width=device-width")
+  body
+  header
+    h1= "KENZIEGRAM"
+  form(action="/upload" method="post" enctype="multipart/form-data")
+    input(type="file" id="file" name="myFile" value="file")
+    input(type="submit" class="button" id="upload" value="upload")
+  div(id='content')
+    each photo in images
+      img(src= photo)
+  script(src="index.js")
