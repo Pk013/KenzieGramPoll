@@ -35,9 +35,9 @@ function fetchImages() {
         }).catch(function(error) {
             errors++
             if (errors == 2) {
-                clearInterval(exicutionTimer)
+                clearInterval(pollingId)
             }
         });
     console.log(errors)
 }
-setInterval(fetchImages, interval);
+const pollingId = setInterval(fetchImages, interval);
