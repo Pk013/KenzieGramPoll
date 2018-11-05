@@ -24,7 +24,7 @@ function fetchImages() {
         })
     }
 
-    fetch("/update", postOptions)
+    fetch("/latest", postOptions)
         .then(response => response.json())
         .then(data => {
             if (data.timestamp > now) {
